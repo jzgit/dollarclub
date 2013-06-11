@@ -2,7 +2,9 @@
   <div class="span6 offset3 hero">
     <h1>DOLLARCLUB</h1>
     <h3 class="tagline">the first one is the toughest</h3>
-    <%= link_to 'Join', "#new_app", class: 'btn', id: 'join' %>
+    <% if @app.errors.messages.empty? %>
+      <%= link_to 'Join', "#new_app", class: 'btn', id: 'join' %>
+    <% end -%>
   </div>
 </div>
 <div class="row">

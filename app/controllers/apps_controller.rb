@@ -20,6 +20,6 @@ class AppsController < ApplicationController
   end
 
   def new
-    @app = App.new(params[:app])
+    @app ||= App.new(params[:app])
   end
 end
