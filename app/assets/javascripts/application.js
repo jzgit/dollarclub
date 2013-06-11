@@ -17,6 +17,31 @@
 //= require ember-data
 //= require_self
 //= require dollar_club
-DollarClub = Ember.Application.create();
+// DollarClub = Ember.Application.create();
 
 //= require_tree .
+
+$(function(){
+    var mX, mY, distance,
+      $element  = $('#join');
+
+    function calculateDistance(elem, mouseX, mouseY) {
+        return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+    }
+
+    $(document).mousemove(function(e) {
+        mX = e.pageX;
+        mY = e.pageY;
+        distance = calculateDistance($element, mX, mY);
+
+        $element.css({opacity: 100 / distance});
+    });
+
+
+    $element.click(function(e){
+      $('#new_app').fadeIn('slow');
+      $(this).hide();
+    });
+
+
+});

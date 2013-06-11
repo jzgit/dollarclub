@@ -18,10 +18,12 @@ body {
 }
 
 .hero {
-  margin: 0 auto;
   display: block;
   text-align: center;
-  padding-top: 110px;
+  padding: 110px 0 20px 0;
+  &.short {
+    padding: 50px 0;
+  }
 }
 
 .hero h1 {
@@ -42,8 +44,17 @@ body {
   font-style: italic;
 }
 
+#new_app {
+  display: none;
+}
+.show-form #new_app {
+  display: block;
+}
+
 #join {
+  opacity: 0;
+  margin:0 auto;
   color: #333;
-  margin: 20px;
+  margin: 30px;
   padding: 2px 15px;
 }

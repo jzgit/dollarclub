@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="span6 offset3 hero short">
+    <h1>DOLLARCLUB</h1>
+    <h3 class="tagline">the first one is the toughest</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="span6 offset3 app-list">
+    <% @apps.each do |app| %>
+      <div class="well">
+        <b><%= app.name %> </b>- <%= app.description %>
+      </div>
+    <% end -%>
+  </div>
+</div>
