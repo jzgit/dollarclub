@@ -17,7 +17,6 @@
 //= require ember-data
 //= require_self
 //= require dollar_club
-// DollarClub = Ember.Application.create();
 
 //= require_tree .
 
