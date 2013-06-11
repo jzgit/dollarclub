@@ -19,8 +19,9 @@ en:
     #       email: 'E-mail to sign in.'
     #     edit:
     #       email: 'E-mail.'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
+    hints:
+      app:
+        name: 'Give it a good name!'
+        description: 'What will your app do?'
+        business_model: 'subscription, utility, app, marketplace, affiliate, info, ect.'
 

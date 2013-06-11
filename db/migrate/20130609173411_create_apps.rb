@@ -4,7 +4,7 @@ class CreateApps < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :email
-      t.string :business_model
+      t.text :business_model
 
       t.timestamps
     end

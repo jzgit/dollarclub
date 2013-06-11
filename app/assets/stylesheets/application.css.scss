@@ -9,52 +9,71 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
 @import "bootstrap";
+@import "bourbon";
 
 body {
   background: #287842;
 }
 
+.dollar {
+  opacity: 0.1;
+  z-index: 99;
+  position: relative;
+  margin-top: -30%;
+}
+
 .hero {
-  display: block;
   text-align: center;
-  padding: 110px 0 20px 0;
-  &.short {
-    padding: 50px 0;
-  }
+  padding: 110px 0 0 0;
+  margin-bottom: 20px;
+
+  &.short { padding: 50px 0; }
+}
+
+.hero header {
+  position: relative;
+  z-index: 1000;
 }
 
 .hero h1 {
-  font-size: 52px;
+  font-size: 450%;
   color: #303030;
-  margin: 0;
   font-family: "adelle",serif;
-  font-weight: bold;
 }
 
 .tagline {
   font-size: 28px;
   color: #303030;
-  margin: 0;
   font-family: "adelle",serif;
   font-family: "ff-meta-web-pro",sans-serif;
-  font-weight: bold;
   font-style: italic;
 }
 
 #new_app {
   display: none;
+  label, .help-block {
+    color: #b3b3b3;
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  }
+  .help-block {
+    width: 300px;
+  }
 }
+.control-group {
+  margin: 20px 0 30px 0;
+}
+
 .show-form #new_app {
   display: block;
 }
 
 #join {
-  opacity: 0;
+  font-size: 20px;
+  opacity: 0.1;
   margin:0 auto;
   color: #333;
   margin: 30px;
-  padding: 2px 15px;
+  padding: 5px 18px;
 }

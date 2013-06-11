@@ -1,20 +1,16 @@
 <div class="row">
   <div class="span6 offset3 hero">
-    <h1>DOLLARCLUB</h1>
-    <h3 class="tagline">the first one is the toughest</h3>
+    <header>
+      <h1>DOLLARCLUB</h1>
+      <h3 class="tagline">the first one is the toughest</h3>
+    </header>
+
+    <%= image_tag 'dollar1.png', class: 'dollar' %>
+
     <% if @app.errors.messages.empty? %>
-      <%= link_to 'Join', "#new_app", class: 'btn', id: 'join' %>
+      <%= link_to 'Join', "#new_app", {class: 'btn', id: 'join'} %>
     <% end -%>
   </div>
 </div>
-<div class="row">
-  <div class="span6 offset4 <%= 'show-form' unless @app.errors.messages.empty? %>">
-    <%= simple_form_for @app, id: 'join-club' do |f| %>
-      <%= f.input :name, label: 'App name', input_html: {class: 'span4'} %>
-      <%= f.input :description, input_html: {class: 'span4',rows: 5} %>
-      <%= f.input :business_model, input_html: {class: 'span4'}  %>
-      <%= f.input :email, input_html: {class: 'span4'}  %>
-      <%= f.submit 'Join', class: 'btn' %>
-    <% end -%>
-  </div>
-</div>
+<%= render 'form' %>
+

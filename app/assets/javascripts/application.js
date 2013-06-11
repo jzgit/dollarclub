@@ -22,7 +22,8 @@
 
 $(function(){
     var mX, mY, distance,
-      $element  = $('#join');
+      $element  = $('#join'),
+      $dollar = $('.dollar');
 
     function calculateDistance(elem, mouseX, mouseY) {
         return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
@@ -34,6 +35,7 @@ $(function(){
         distance = calculateDistance($element, mX, mY);
 
         $element.css({opacity: 100 / distance});
+        $dollar.css({opacity: 100 / distance});
     });
 
 
