@@ -9,6 +9,7 @@
     <% @apps.each do |app| %>
       <div class="well">
         <b><%= app.name %> </b>- <%= app.description %>
+        <br />(<%= app.business_model %>)
       </div>
     <% end -%>
   </div>
