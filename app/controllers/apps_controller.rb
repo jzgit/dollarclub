@@ -2,7 +2,9 @@ class AppsController < ApplicationController
   respond_to :json, :html
 
   def index
-    @apps = App.all
+    @apps = App.order("created_at")
+      .page(params[:page])
+      .per(params[:per])
     # respond_with App.all
   end
 
@@ -20,6 +22,7 @@ class AppsController < ApplicationController
   end
 
   def new
+    @role = params[:role]
     @app ||= App.new(params[:app])
   end
 end

@@ -1,6 +1,7 @@
 <div class="row">
   <div class="span6 offset4 <%= 'show-form' unless @app.errors.messages.empty? %>">
     <%= simple_form_for @app, id: 'join-club', defaults: { input_html: { class: 'span4'}} do |f| %>
+      <%= f.hidden_field :role, value: @role %>
       <%= f.input :name, label: 'App name' %>
       <%= f.input :description, input_html: { rows: 5} %>
       <%= f.input :business_model, input_html: { rows: 3}  %>
