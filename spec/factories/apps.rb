@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :app do
-    name "MyString"
+    sequence(:name, 1) {|n| "Pizza Party #{n}" }
     description "MyText"
     email "MyString"
     business_model "MyString"

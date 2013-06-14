@@ -10,6 +10,9 @@ gem 'ember-rails'
 gem 'ember-source', '1.0.0.rc5' # or the version you need
 gem 'handlebars-source', '1.0.0.rc4' # or the version you need
 gem 'simple_form'
+gem 'kaminari'
+
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
